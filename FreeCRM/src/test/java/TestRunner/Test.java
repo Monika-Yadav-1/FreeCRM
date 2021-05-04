@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="Feature/",glue= {"StepDefinition"})
 
-
-public class Test {
+public class Test 
+{
 
 }
