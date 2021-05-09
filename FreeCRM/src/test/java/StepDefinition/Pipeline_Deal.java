@@ -45,7 +45,7 @@ public class Pipeline_Deal
 	@When("^User selects Pipeline option from Deals section$")
 	public void user_selects_Pipeline_option_from_Deals_section() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    test.clickdeal();
 	    Thread.sleep(3000);	
@@ -58,7 +58,7 @@ public class Pipeline_Deal
 	@Then("^User should be redirected to Pipeline page$")
 	public void user_should_be_redirected_to_Pipeline_page() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		Thread.sleep(3000);
 	}
 
@@ -87,8 +87,8 @@ public class Pipeline_Deal
 	@Then("^User should be redirected to Deals Pipeline page and validation message should display$")
 	public void user_should_be_redirected_to_Deals_Pipeline_page_and_validation_message_should_display() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    driver.close(); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		driver.close(); 
 	}
 
 	
@@ -96,12 +96,12 @@ public class Pipeline_Deal
 	@When("^User selects a particular deal from Pipeline drop down menu$")
 	public void user_selects_a_particular_deal_from_Pipeline_drop_down_menu() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    test.clickpipelineselect();
-	    Thread.sleep(2000);
-	    test.selectpipelinenamefromdd();
-	    Thread.sleep(3000); 
+		test.clickpipelineselect();
+		Thread.sleep(2000);
+		test.selectpipelinenamefromdd();
+		Thread.sleep(3000); 
 	}
 
 	
@@ -109,8 +109,8 @@ public class Pipeline_Deal
 	@Then("^User should be redirected to Deals Pipeline page$")
 	public void user_should_be_redirected_to_Deals_Pipeline_page() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
-	    driver.close(); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		driver.close(); 
 	}
 
 }

@@ -66,8 +66,8 @@ public class Export_Deal
 	@When("^User selects deals from dashboard and clicks on export option$")
 	public void user_selects_deals_from_dashboard_and_clicks_on_export_option() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
-	    test.clickexpdeal();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickexpdeal();
 	    Thread.sleep(2000);
 	    test.clickexp();
 	    Thread.sleep(5000);
@@ -80,8 +80,8 @@ public class Export_Deal
 	@Then("^Deals should be exported to documents section$")
 	public void deals_should_be_exported_to_documents_section() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
-	    test.clickdocument();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickdocument();
 	    Thread.sleep(2000);
 	    test.dashboard();
 	    Thread.sleep(2000);

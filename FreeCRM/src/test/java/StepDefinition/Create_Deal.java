@@ -77,8 +77,8 @@ public class Create_Deal
 	@Then("^New deal is created$")
 	public void new_deal_is_created() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
-		test.clickdeal(); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickdeal();
 		test.dashboard();
 		Thread.sleep(3000);
 	}
@@ -89,8 +89,8 @@ public class Create_Deal
 	public void user_leaves_the_title_field_blank_and_clicks_on_save() throws Throwable 
 	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-	    test.clicktitle("");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		test.clicktitle("");
 	    Thread.sleep(3000);
 	    test.clicksave();
 	}
@@ -100,7 +100,7 @@ public class Create_Deal
 	@Then("^Error message should be displayed on saving$")
 	public void error_message_should_be_displayed_on_saving() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		Thread.sleep(3000);
 		driver.close();    
 	}
@@ -110,8 +110,8 @@ public class Create_Deal
 	@When("^User enters values in the fields and clicks on save$")
 	public void user_enters_values_in_the_fields_and_clicks_on_save() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 	    test.clicktitle("Deal 2");
 	    Thread.sleep(3000);
 	    test.clickprivate();
@@ -160,8 +160,8 @@ public class Create_Deal
 	@Then("^New deal should be created$")
 	public void new_deal_should_be_created() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    test.clicksave();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clicksave();
 	    Thread.sleep(2000);
 	    driver.close();
 	}
@@ -174,10 +174,11 @@ public class Create_Deal
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 		File credentials=new File("C:\\Users\\monik\\Desktop\\TRAINING\\SeleniumWebDriver\\Data.xlsx");
-        FileInputStream fis = new FileInputStream(credentials);
+		
+		FileInputStream fis = new FileInputStream(credentials);
         XSSFWorkbook wb = new XSSFWorkbook(fis);
         XSSFSheet sheet1 = wb.getSheetAt(0);
-       
+        
         String title=sheet1.getRow(1).getCell(0).getStringCellValue();
         test.clicktitle(title);
 		String desc=sheet1.getRow(1).getCell(1).getStringCellValue();
@@ -206,7 +207,7 @@ public class Create_Deal
 	@When("^User fills the fields and clicks on cancel$")
 	public void user_fills_the_fields_and_clicks_on_cancel() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		test.clicktitle("Deal 2");
 	    Thread.sleep(3000);
 	    test.clickprivate();

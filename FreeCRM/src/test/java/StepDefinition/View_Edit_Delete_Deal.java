@@ -67,7 +67,7 @@ public class View_Edit_Delete_Deal
 	public void user_selects_the_deal_from_dashboard_by_clicking_on_view_icon() throws Throwable 
 	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
-	    test.clickviewButton();      
+		test.clickviewButton();      
 	}
 
 	
@@ -76,7 +76,7 @@ public class View_Edit_Delete_Deal
 	public void existing_deal_should_be_visible_with_all_details() throws Throwable 
 	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
-	    Thread.sleep(3000);  
+		Thread.sleep(3000);  
 	    driver.close(); 
 	}
 
@@ -85,8 +85,8 @@ public class View_Edit_Delete_Deal
 	@When("^User selects the deal from dashboard by clicking on edit icon$")
 	public void user_selects_the_deal_from_dashboard_by_clicking_on_edit_icon() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
-	    test.clickeditButton();  
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickeditButton();  
 	}
 
 	
@@ -94,7 +94,7 @@ public class View_Edit_Delete_Deal
 	@Then("^User should be able to edit the deal$")
 	public void user_should_be_able_to_edit_the_deal() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		Thread.sleep(3000);  
 	    driver.close();   
 	}
@@ -104,8 +104,8 @@ public class View_Edit_Delete_Deal
 	@When("^User selects the deal from dashboard by clicking on delete icon$")
 	public void user_selects_the_deal_from_dashboard_by_clicking_on_delete_icon() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    test.clickdeleteButton();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickdeleteButton();
 	    Thread.sleep(3000);
 	    test.clickdeleteButtonAlert();
 	    Thread.sleep(3000);
@@ -116,8 +116,8 @@ public class View_Edit_Delete_Deal
 	@Then("^User should be able to see deal in bin$")
 	public void user_should_be_able_to_see_deal_in_bin() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
-	    test.clickBinButton();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickBinButton();
 	    Thread.sleep(2000);
 	    test.clickBinDealsButton();
 	    Thread.sleep(4000);

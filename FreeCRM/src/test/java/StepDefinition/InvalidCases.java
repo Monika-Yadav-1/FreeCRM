@@ -48,7 +48,8 @@ public class InvalidCases
 	
 	@Test(priority=2)
 	@Then("^User should be logged in and go to the Deals section$")
-	public void user_should_be_logged_in_and_go_to_the_Deals_section() throws Throwable {
+	public void user_should_be_logged_in_and_go_to_the_Deals_section() throws Throwable 
+	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		test.clickdeal();
 		Thread.sleep(3000);	
@@ -61,7 +62,8 @@ public class InvalidCases
 	
 	@Test(priority=3)
 	@When("^User fills invalid values in ([^\\\"]*)$")
-	public void user_fills_invalid_values_in(String arg1) throws Throwable {  
+	public void user_fills_invalid_values_in(String arg1) throws Throwable 
+	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		test.clicktitle(arg1);
 		test.clicksave();
@@ -72,8 +74,8 @@ public class InvalidCases
 	@Then("^New Deal should not be created$")
 	public void new_Deal_should_not_be_created() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    boolean b = test.displayerror();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		boolean b = test.displayerror();
 		assertTrue(b);	
 	}
 
@@ -82,8 +84,8 @@ public class InvalidCases
 	@When("^user fills invalid values in the ([^\\\"]*)$")
 	public void user_fills_invalid_values_in_the(String arg2) throws Throwable 
 	{
-    	DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
-    	test.clicktitle("Abcd");
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clicktitle("Abcd");
 		test.companyName(arg2);
 		test.clicksave();
 	}
@@ -93,8 +95,8 @@ public class InvalidCases
 	@Then("^A new Deal should not be created$")
 	public void a_new_Deal_should_not_be_created() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    boolean b = test.displayerror();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		boolean b = test.displayerror();
 		assertTrue(b);  
 	}
 	
@@ -104,7 +106,7 @@ public class InvalidCases
 	public void user_fills_the_invalid_values_in(String arg3) throws Throwable 
 	{
 		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
-    	test.clicktitle("Xyz");
+		test.clicktitle("Xyz");
 		test.productName(arg3);
 		test.clicksave();
 	}
@@ -114,8 +116,8 @@ public class InvalidCases
 	@Then("^No new deal should be created$")
 	public void no_new_deal_should_be_created() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    boolean b = test.displayerror();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		boolean b = test.displayerror();
 		assertTrue(b);
 	}
 	

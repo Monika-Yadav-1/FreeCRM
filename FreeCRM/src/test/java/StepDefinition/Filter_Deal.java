@@ -46,8 +46,8 @@ public class Filter_Deal
 	@When("^User selects Show Filter option from Deals section$")
 	public void user_selects_Show_Filter_option_from_Deals_section() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    test.clickdeal();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickdeal();
 	    Thread.sleep(3000);	
 	    test.clickShowFilterButton();
 	}
@@ -57,7 +57,7 @@ public class Filter_Deal
 	@Then("^User should be redirected to Filter dashboard$")
 	public void user_should_be_redirected_to_Filter_dashboard() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		Thread.sleep(3000);	 
 	}
 
@@ -66,8 +66,8 @@ public class Filter_Deal
 	@When("^User selects title, operator and vlaue fields$")
 	public void user_selects_title_operator_and_vlaue_fields() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
-	    test.clickSearchFilter();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickSearchFilter();
 	    Thread.sleep(2000);	
 	    test.selectSearchOption();
 	    Thread.sleep(2000);	
@@ -86,10 +86,10 @@ public class Filter_Deal
 	@Then("^Deals should be filtered accordingly and displayed$")
 	public void deals_should_be_filtered_accordingly_and_displayed() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);   
-		 test.clickfilterSearchButton();
-		 Thread.sleep(3000);
-		 driver.close();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		test.clickfilterSearchButton();
+		Thread.sleep(3000);
+		driver.close();
 	}
 
 	
@@ -97,7 +97,7 @@ public class Filter_Deal
 	@When("^User clicks on clear icon from dashboard$")
 	public void user_clicks_on_clear_icon_from_dashboard() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);  
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
 		test.clickSearchFilter();
 	    Thread.sleep(2000);	
 	    test.selectSearchOption();
@@ -118,9 +118,9 @@ public class Filter_Deal
 	@Then("^User should get redirected to deals dashboard$")
 	public void user_should_get_redirected_to_deals_dashboard() throws Throwable 
 	{
-		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class); 
-		 Thread.sleep(3000); 
-		 driver.close();
+		DealModulePOM test=PageFactory.initElements(driver,DealModulePOM.class);
+		Thread.sleep(3000);
+		driver.close();
 	}
 	
 }
