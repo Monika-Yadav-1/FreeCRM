@@ -1,26 +1,54 @@
 package POM;
 
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class DealModulePOM 
 {
-WebDriver driver;
 	
-	/*POM FOR CREATE DEAL OPTION*/
+	WebDriver driver;
+	
+	/*POM FOR LOGIN*/
 
-	@FindBy(name="email")
+	@FindBy(xpath="//input[@placeholder='E-mail address']")
 	WebElement email;
 	
-	@FindBy(name="password")
+	@FindBy(xpath="//input[@name= 'password']")
 	WebElement password;
 	
 	@FindBy(xpath="//div[@class='ui fluid large blue submit button']")
 	WebElement loginbutton;
 	
-	@FindBy(xpath = "//span[contains(text(),'Deals')]")
+	
+	public void inputemail(String eml)
+	{
+        email.sendKeys(eml);
+	}
+	
+	public void inputpassword(String pwd)
+	{
+		password.sendKeys(pwd);
+	}
+	
+	public void clicklogin()
+	{
+		loginbutton.click();
+	}
+	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	
+	/*POM FOR CREATE DEAL OPTION*/
+	
+	
+	@FindBy(xpath = "//a[@href='/deals']")
 	WebElement deals;
 	
 	@FindBy(xpath = "//button[contains(text(),'Create')]")
@@ -44,6 +72,12 @@ WebDriver driver;
 	@FindBy(xpath="//div[@role='listbox']//span[contains(text(),'Monika Yadav')]")
 	WebElement assign;
 	
+	@FindBy(xpath="//div[@name='company']//input[@type='text']")
+	WebElement company;
+	
+	@FindBy(xpath="//div[@name='products']//input[@type='text']")
+	WebElement product;
+	
 	@FindBy(xpath="//input[@class='calendarField']")
 	WebElement calendardd;
 	
@@ -52,6 +86,12 @@ WebDriver driver;
 	
 	@FindBy(xpath="//div[@class='ui fluid container']")
 	WebElement calendarcl;
+	
+	@FindBy(xpath="//label[@for='tags']")
+	WebElement tags;
+	
+	@FindBy(xpath="//div[@name='contacts']//input[@type='text']")
+	WebElement contacts;
 		
 	@FindBy(name="description")
 	WebElement description;
@@ -77,6 +117,9 @@ WebDriver driver;
 	@FindBy(xpath="//div[@name='status']//span[contains(text(),'Active')]")
 	WebElement status;
 	
+	@FindBy(xpath="//textarea[@name='next_step']")
+	WebElement next;
+	
 	@FindBy(xpath="//div[@name='type']//i[@class='dropdown icon']")
 	WebElement typedd;
 	
@@ -89,31 +132,20 @@ WebDriver driver;
 	@FindBy(xpath="//div[@name='source']//span[contains(text(),'Online')]")
 	WebElement source;
 	
+	@FindBy(xpath="//input[@name='identifier']")
+	WebElement Identifier;
+	
 	@FindBy(xpath="//button[@class='ui linkedin button']")
 	WebElement save;
 	
 	@FindBy(xpath="//button[@class='ui button']")
 	WebElement cancel;
 	
+	
 	public DealModulePOM (WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	}
-	
-	public void inputemail(String eml)
-	{
-		email.sendKeys(eml);
-	}
-	
-	public void inputpassword(String pwd)
-	{
-		password.sendKeys(pwd);
-	}
-	
-	public void clicklogin()
-	{
-		loginbutton.click();
 	}
 	
 	public void clickdeal()
@@ -154,6 +186,34 @@ WebDriver driver;
 	public void clickassign()
 	{
 		assign.click();
+	}
+	
+	public void tagName(String tag)
+	{
+	tags.sendKeys(tag);
+	Actions act1=new Actions(driver);
+	act1.sendKeys(Keys.ENTER).perform();
+	}
+	
+	public void companyName(String comp)
+	{
+	company.sendKeys(comp);
+	Actions act2=new Actions(driver);
+	act2.sendKeys(Keys.ENTER).perform();
+	}
+	
+	public void productName(String pro)
+	{
+	product.sendKeys(pro);
+	Actions act3=new Actions(driver);
+	act3.sendKeys(Keys.ENTER).perform();
+	}
+	
+	public void contactName(String cont)
+	{
+	contacts.sendKeys(cont);
+	Actions act4=new Actions(driver);
+	act4.sendKeys(Keys.ENTER).perform();
 	}
 	
 	public void clickcalendar()
@@ -211,6 +271,11 @@ WebDriver driver;
 		status.click();
 	}
 	
+	public void inputnextsteps(String nxt)
+	{
+		next.sendKeys(nxt);
+	}
+	
 	public void clicktype()
 	{
 		typedd.click();
@@ -231,6 +296,11 @@ WebDriver driver;
 		source.click();
 	}
 	
+	public void giveIdentifier(String iden)
+	{
+	Identifier.sendKeys(iden);
+	}
+	
 	public void clicksave()
 	{
 		save.click();
@@ -241,7 +311,8 @@ WebDriver driver;
 		cancel.click();
 	}
 	
-	//////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////
 	
 	/*POM FOR EXPORT DEAL OPTION*/
 
@@ -263,6 +334,7 @@ WebDriver driver;
 	
 	@FindBy(xpath="//a[contains(text(),'Exports')]")
 	WebElement documentexp;
+	
 	
 	public void clickexpdeal()
 	{
@@ -295,7 +367,7 @@ WebDriver driver;
 	}
 	
 	
-	//////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////
 	
 	/*POM FOR PIPELINE REPORT*/
 
@@ -304,12 +376,15 @@ WebDriver driver;
 	WebElement pipeline;
 
 	@FindBy(xpath="//div[@class='ui multiple selection dropdown']//i[@class='dropdown icon']")
-	WebElement pipelinefield;//span[contains(text(),'Amount')]
+	WebElement pipelinefield;
 
 	@FindBy(xpath="//span[contains(text(),'Amount')]")
 	WebElement pipelineoption;
+	
+	@FindBy(xpath="//button[@class='ui basic button']")
+	WebElement plus;
 
-	@FindBy(name="pipeline_name")
+	@FindBy(xpath="//input[@name='pipeline_name']")
 	WebElement pipelinename;
 
 	@FindBy(xpath="//button[@class='ui primary button'][contains(text(),'Create')]")
@@ -318,6 +393,12 @@ WebDriver driver;
 	@FindBy(xpath="//button[@class='ui negative button']")
 	WebElement cancelppl;
 
+	@FindBy(xpath="//div[@class='divider default text'][contains(text(),'Select pipeline')]")
+	WebElement sltpipeline;
+	
+	@FindBy(xpath="//span[contains(text(),'Pipeline report')]")
+	WebElement pplname;
+	
 
 	public void clickpipeline()
 	{
@@ -334,9 +415,14 @@ WebDriver driver;
 		pipelineoption.click();
 	}	
 
-	public void selectpipelinename(String ppl)
+	public void selectplusbutton()
 	{
-		pipelineoption.sendKeys(ppl);
+		plus.click();
+	}
+	
+	public void inputpipelinename(String ppl)
+	{
+		pipelinename.sendKeys(ppl);
 	}
 
 	public void clickpipelinecreate()
@@ -349,8 +435,18 @@ WebDriver driver;
 		cancelppl.click();
 	}
 
+	public void clickpipelineselect()
+	{
+		sltpipeline.click();
+	}
 
-	//////////////////////////////////////////////////////////////////
+	public void selectpipelinenamefromdd()
+	{
+		pplname.click();
+	}
+	
+	
+	///////////////////////////////////////////////////////////////////////////////
 
 	/*POM FOR FILTER DEAL OPTION*/
 	
@@ -364,7 +460,7 @@ WebDriver driver;
 	@FindBy(xpath="//span[contains(text(),'Assigned To')]")
 	WebElement searchcnf;
 	
-	@FindBy(name="operator")
+	@FindBy(xpath="//div[@name='operator']")
 	WebElement opertatorfilter;
 	
 	@FindBy(xpath="//span[contains(text(),'Contains')]")
@@ -385,12 +481,13 @@ WebDriver driver;
 	@FindBy(xpath="//button[normalize-space()='Add Filter Row']")
 	WebElement filteraddButton;
 	
-	public void ShowFilterButton()
+	
+	public void clickShowFilterButton()
 	{
 		showfilter.click();
 	}
 	
-	public void SearchFilter()
+	public void clickSearchFilter()
 	{
 		searchfilter.click();
 	}
@@ -400,7 +497,7 @@ WebDriver driver;
 		searchcnf.click();
 	}
 	
-	public void opertatorFilter() 
+	public void clickoperatorFilter() 
 	{
 		opertatorfilter.click();
 	}
@@ -410,7 +507,7 @@ WebDriver driver;
 		opertator.click();
 	}
 	
-	public void Valuefilter() 
+	public void clickValuefilter() 
 	{
 		valuefilter.click();
 	}
@@ -420,96 +517,131 @@ WebDriver driver;
 		value.click();
 	}
 	
-	public void filterSearchButton()
+	public void clickfilterSearchButton()
 	{
 		filterbutton.click();
 	}
 	
-	public void filterClear() 
+	public void clickfilterClear() 
 	{
 		filterclear.click();
 	}
-	public void filterAddButton()
+	
+	public void clickfilterAddButton()
 	{
 		filteraddButton.click();
 		
 	}	
 	
 	
-	//////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////
 	
 	/*POM FOR VIEW EDIT AND DELETE DEAL OPTIONS*/
 	
-	@FindBy(xpath = "//tbody/tr[1]/td[5]/a[1]/button[1]/i[1]")
-	WebElement Viewbutton;
 	
-	@FindBy(xpath = "//tbody/tr[1]/td[5]/a[2]/button[1]/i[1]")
-	WebElement Editbutton;
+	@FindBy(xpath = "//tbody/tr[1]/td[8]/a[1]/button[1]/i[@class='unhide icon']")
+	WebElement viewbutton;
 	
-	@FindBy(xpath = "//tbody/tr[1]/td[5]/div[1]/button[1]/i[1]")
-	WebElement Deletebutton;
+	@FindBy(xpath = "//tbody/tr[1]/td[8]/a[2]/button[1]//i[@class='edit icon']")
+	WebElement editbutton;
+	
+	@FindBy(xpath = "//tbody/tr[1]/td[8]/div/button/i[@class='trash icon']")
+	WebElement deletebutton;
 	
 	@FindBy(xpath = "//button[normalize-space()='Delete']")
-	WebElement DeletebuttonAlert;
+	WebElement deletebuttonAlert;
 	
 	@FindBy(xpath = "//button[normalize-space()='Cancel']")
-	WebElement CancelbuttonAlert;
+	WebElement cancelbuttonAlert;
 	
 	@FindBy(xpath = "//button[@class='ui basic button item']")
-	WebElement Binbutton;
+	WebElement binbutton;
 	
-	@FindBy(xpath = "//a[normalize-space()='Case (7)']")
-	WebElement Bincases;
+	@FindBy(xpath = "//div[@class='ui menu']/a[5]")
+	WebElement bindeals;
 	
 	@FindBy(xpath = "//tbody/tr[7]/td[1]/div[1]/label[1]")
-	WebElement Checkbox1case;
+	WebElement checkbox1case;
 	
 	@FindBy(xpath="//th[@class='collapsing']//label")
-	WebElement BincheckboxAll;
+	WebElement bincheckboxAll;
 	
 	@FindBy(xpath="//button[normalize-space()='Restore Selected']")
-	WebElement Restoreselectedbutton;
+	WebElement restoreselectedbutton;
 	
-	public void viewButton() 
+	
+	public void clickviewButton() 
 	{
-		Viewbutton.click();
+		viewbutton.click();
 	}
-	public void editButton() 
+	
+	public void clickeditButton() 
 	{
-		Editbutton.click();
+		editbutton.click();
 	}
-	public void deleteButton() 
+	
+	public void clickdeleteButton() 
 	{
-		Deletebutton.click();
+		deletebutton.click();
 	}
-	public void deleteButtonAlert()
+	
+	public void clickdeleteButtonAlert()
 	{
-		DeletebuttonAlert.click();
+		deletebuttonAlert.click();
 	}
-	public void cancelButtonAlert()
+	
+	public void clickcancelButtonAlert()
 	{
-		CancelbuttonAlert.click();
+		cancelbuttonAlert.click();
 	}
+	
 	public void clickBinButton()
 	{
-		Binbutton.click();
+		binbutton.click();
 	}
-	public void clickBinCasesButton()
+	
+	public void clickBinDealsButton()
 	{
-		Bincases.click();
+		bindeals.click();
 	}
-	public void bincheckBox1Case() 
+	
+	public void clickbincheckBox1Case() 
 	{
-		Checkbox1case.click();
+		checkbox1case.click();
 	}
-	public void bincheckBoxCaseAll() 
+	
+	public void clickbincheckBoxCaseAll() 
 	{
-		BincheckboxAll.click();
+		bincheckboxAll.click();
 	}
-	public void restoreSelectedButton()
+	
+	public void clickrestoreSelectedButton()
 	{
-		Restoreselectedbutton.click();
+		restoreselectedbutton.click();
 	} 
+	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	
+	/*POM FOR INVALID OPERATIONS*/
+	
+	
+	@FindBy(xpath="//span[@class='inline-error-msg']")
+	WebElement errormsg;
+	
+	
+	public boolean displayerror()
+	{
+		try 
+		{
+				errormsg.isDisplayed();
+				return true;
+		}
+		catch(NoSuchElementException e)
+		{
+			return false;
+		}
+	}
 	
 }
 

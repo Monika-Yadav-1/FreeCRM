@@ -1,0 +1,109 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7122349800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to login page",
+            "match": {
+              "location": "Export_Deal.user_goes_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6122863300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters valid credential",
+            "match": {
+              "location": "Export_Deal.user_enters_valid_credential()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3094848300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects deals section from sidebar menu",
+            "match": {
+              "location": "Export_Deal.user_selects_deals_section_from_sidebar_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5066523100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to the Deals dashboard",
+            "match": {
+              "location": "Export_Deal.user_should_be_redirected_to_the_Deals_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Exporting Deals",
+        "description": "",
+        "id": "validate-export-functionality;exporting-deals",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9254859600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User selects deals from dashboard and clicks on export option",
+            "match": {
+              "location": "Export_Deal.user_selects_deals_from_dashboard_and_clicks_on_export_option()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9263313100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Deals should be exported to documents section",
+            "match": {
+              "location": "Export_Deal.deals_should_be_exported_to_documents_section()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@Export"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Export functionality",
+    "description": "Description: Testing export option from dashboard",
+    "id": "validate-export-functionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/Export_Deal.feature"
+  }
+]

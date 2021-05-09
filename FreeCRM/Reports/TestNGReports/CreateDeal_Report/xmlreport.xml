@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="280.163999">
+<testcase classname="Validate Create Deal functionality" name="User fills all the required fields" time="41.312807">
+<system-out><![CDATA[Given User navigates to the login page......................................passed
+When User enters the valid credentials......................................passed
+Then User should be logged in and go to the deals section...................passed
+When User enters valid title name and clicks on save........................passed
+Then New deal is created....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Create Deal functionality" name="User leaves the required fields blank" time="45.046598">
+<system-out><![CDATA[Given User navigates to the login page......................................passed
+When User enters the valid credentials......................................passed
+Then User should be logged in and go to the deals section...................passed
+When User leaves the title field blank and clicks on save...................passed
+Then Error message should be displayed on saving............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Create Deal functionality" name="User enters valid data" time="86.822801">
+<system-out><![CDATA[Given User navigates to the login page......................................passed
+When User enters the valid credentials......................................passed
+Then User should be logged in and go to the deals section...................passed
+When User enters values in the fields and clicks on save....................passed
+Then New deal should be created.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Create Deal functionality" name="User fetches data from excel sheet" time="36.479973">
+<system-out><![CDATA[Given User navigates to the login page......................................passed
+When User enters the valid credentials......................................passed
+Then User should be logged in and go to the deals section...................passed
+When User fills all text fields and clicks on save..........................passed
+Then A new deal should be created...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Create Deal functionality" name="User cancels the deal" time="70.50182">
+<system-out><![CDATA[Given User navigates to the login page......................................passed
+When User enters the valid credentials......................................passed
+Then User should be logged in and go to the deals section...................passed
+When User fills the fields and clicks on cancel.............................passed
+Then All fields should clear and deal should not be saved...................passed
+]]></system-out>
+</testcase>
+</testsuite>

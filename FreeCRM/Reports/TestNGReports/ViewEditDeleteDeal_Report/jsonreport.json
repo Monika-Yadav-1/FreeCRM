@@ -1,0 +1,303 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6732204000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to Login page",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_navigates_to_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15093955000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Enters valid credentials",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_Enters_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3142125200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects Deals section from sidebar menu",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_Deals_section_from_sidebar_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5006657400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to Deals dashboard",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_should_be_redirected_to_Deals_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "View an existing deal",
+        "description": "",
+        "id": "validate-view,-edit-and-delete-functionality;view-an-existing-deal",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 79149600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User selects the deal from dashboard by clicking on view icon",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_the_deal_from_dashboard_by_clicking_on_view_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3072206600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Existing deal should be visible with all details",
+            "match": {
+              "location": "View_Edit_Delete_Deal.existing_deal_should_be_visible_with_all_details()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@View"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5463331400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to Login page",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_navigates_to_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15316048600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Enters valid credentials",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_Enters_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3134812200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects Deals section from sidebar menu",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_Deals_section_from_sidebar_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000966500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to Deals dashboard",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_should_be_redirected_to_Deals_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "Edit an existing deal",
+        "description": "",
+        "id": "validate-view,-edit-and-delete-functionality;edit-an-existing-deal",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 166623500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User selects the deal from dashboard by clicking on edit icon",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_the_deal_from_dashboard_by_clicking_on_edit_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3065148900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should be able to edit the deal",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_should_be_able_to_edit_the_deal()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 17,
+            "name": "@Edit"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5699802700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to Login page",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_navigates_to_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17833303100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Enters valid credentials",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_Enters_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3138245500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects Deals section from sidebar menu",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_Deals_section_from_sidebar_menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5001246900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to Deals dashboard",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_should_be_redirected_to_Deals_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Delete an existing deal",
+        "description": "",
+        "id": "validate-view,-edit-and-delete-functionality;delete-an-existing-deal",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6182525300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User selects the deal from dashboard by clicking on delete icon",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_selects_the_deal_from_dashboard_by_clicking_on_delete_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6210637200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User should be able to see deal in bin",
+            "match": {
+              "location": "View_Edit_Delete_Deal.user_should_be_able_to_see_deal_in_bin()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 23,
+            "name": "@Delete"
+          }
+        ]
+      }
+    ],
+    "name": "Validate View, Edit and Delete functionality",
+    "description": "Description: Testing the view, edit and delete operations from Deals dashoard",
+    "id": "validate-view,-edit-and-delete-functionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/View_Edit_Delete_Deal.feature"
+  }
+]
