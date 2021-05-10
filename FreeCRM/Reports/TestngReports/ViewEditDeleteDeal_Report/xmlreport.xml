@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="80.220314">
+<testcase classname="Validate View, Edit and Delete functionality" name="View an existing deal" time="24.588132">
+<system-out><![CDATA[Given User navigates to Login page..........................................passed
+When User Enters valid credentials..........................................passed
+And User selects Deals section from sidebar menu............................passed
+Then User should be redirected to Deals dashboard...........................passed
+When User selects the deal from dashboard by clicking on view icon..........passed
+Then Existing deal should be visible with all details.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate View, Edit and Delete functionality" name="Edit an existing deal" time="22.515642">
+<system-out><![CDATA[Given User navigates to Login page..........................................passed
+When User Enters valid credentials..........................................passed
+And User selects Deals section from sidebar menu............................passed
+Then User should be redirected to Deals dashboard...........................passed
+When User selects the deal from dashboard by clicking on edit icon..........passed
+Then User should be able to edit the deal...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate View, Edit and Delete functionality" name="Delete an existing deal" time="33.11654">
+<system-out><![CDATA[Given User navigates to Login page..........................................passed
+When User Enters valid credentials..........................................passed
+And User selects Deals section from sidebar menu............................passed
+Then User should be redirected to Deals dashboard...........................passed
+When User selects the deal from dashboard by clicking on delete icon........passed
+Then User should be able to see deal in bin.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

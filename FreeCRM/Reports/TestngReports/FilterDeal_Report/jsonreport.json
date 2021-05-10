@@ -1,0 +1,206 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6555407500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to login page",
+            "match": {
+              "location": "Filter_Deal.user_navigates_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5594836200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters valid login credentials",
+            "match": {
+              "location": "Filter_Deal.user_enters_valid_login_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3197566200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects Show Filter option from Deals section",
+            "match": {
+              "location": "Filter_Deal.user_selects_Show_Filter_option_from_Deals_section()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3012810100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to Filter dashboard",
+            "match": {
+              "location": "Filter_Deal.user_should_be_redirected_to_Filter_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Filtering deals using single parameter row",
+        "description": "",
+        "id": "validate-filter-functionality;filtering-deals-using-single-parameter-row",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15476790800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User selects title, operator and vlaue fields",
+            "match": {
+              "location": "Filter_Deal.user_selects_title_operator_and_vlaue_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3184456200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Deals should be filtered accordingly and displayed",
+            "match": {
+              "location": "Filter_Deal.deals_should_be_filtered_accordingly_and_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
+            "name": "@Filter1"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "User is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5967009500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to login page",
+            "match": {
+              "location": "Filter_Deal.user_navigates_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5146048900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters valid login credentials",
+            "match": {
+              "location": "Filter_Deal.user_enters_valid_login_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3192885100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User selects Show Filter option from Deals section",
+            "match": {
+              "location": "Filter_Deal.user_selects_Show_Filter_option_from_Deals_section()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3001055500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be redirected to Filter dashboard",
+            "match": {
+              "location": "Filter_Deal.user_should_be_redirected_to_Filter_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "Clearing filters",
+        "description": "",
+        "id": "validate-filter-functionality;clearing-filters",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15483934300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User clicks on clear icon from dashboard",
+            "match": {
+              "location": "Filter_Deal.user_clicks_on_clear_icon_from_dashboard()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3082045700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should get redirected to deals dashboard",
+            "match": {
+              "location": "Filter_Deal.user_should_get_redirected_to_deals_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 17,
+            "name": "@Filter2"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Filter functionality",
+    "description": "Description: Testing filter option from dashboard",
+    "id": "validate-filter-functionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/Filter_Deal.feature"
+  }
+]
